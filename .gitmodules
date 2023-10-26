@@ -1,0 +1,3 @@
+[submodule "frontend/cycnet"]
+	path = frontend/cycnet
+	url = https://github.com/yermanovberik/netday.git
