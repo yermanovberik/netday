@@ -1,5 +1,5 @@
 """
-WSGI config for netday project.
+WSGI config for netday2 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

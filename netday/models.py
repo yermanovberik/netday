@@ -2,7 +2,6 @@
 from django.db import models
 
 
-
 class Registration(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=100)
@@ -16,7 +15,3 @@ class Registration(models.Model):
     course = models.IntegerField()
     isPay = models.BooleanField(default=False)
     payment_id = models.CharField(max_length=100, null=True)
-
-    class Meta:
-        db_table = 'netday_registration'
-        app_label = "netday"

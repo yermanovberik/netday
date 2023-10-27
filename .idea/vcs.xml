@@ -4,6 +4,5 @@
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/frontend/cycnet" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/https:/github.com/yermanovberik/netday.git" vcs="Git" />
   </component>
 </project>
