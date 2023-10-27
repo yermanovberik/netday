@@ -18,7 +18,7 @@ if not DEBUG and not CORS_ORIGIN_ALLOW_ALL:
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-FRONTEND_URL = os.getenv("FRONTEND_URL")
+FRONTEND_INDEX_PAGE_URL = os.getenv("FRONTEND_INDEX_PAGE_URL")
 PAYMENT_CONFIRMATION_URL = os.getenv("PAYMENT_CONFIRMATION_URL")
 
 INSTALLED_APPS = [
@@ -38,15 +38,16 @@ INSTALLED_APPS = [
 EMAIL_HOST = os.getenv("EMAIL_HOST")
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-EMAIL_PORT = os.getenv("EMAIL_PORT")
-EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS")
+EMAIL_PORT = int(os.getenv("EMAIL_PORT"))
 EMAIL_BACKEND = os.getenv("EMAIL_BACKEND")
+EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS")
 
+PAYMENT_AMOUNT = os.getenv("PAYMENT_AMOUNT")
 PAYPAL_CLIENT_ID = os.getenv("PAYPAL_CLIENT_ID")
 PAYPAL_CLIENT_SECRET = os.getenv("PAYPAL_CLIENT_SECRET")
 PAYPAL_MODE = os.getenv("PAYPAL_MODE")
 PAYPAL_RECEIVER_EMAIL = os.getenv("PAYPAL_RECEIVER_EMAIL")
-PAYPAL_TEST = False
+PAYPAL_TEST = bool(os.getenv("PAYPAL_TEST"))
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -108,7 +109,7 @@ USE_I18N = True
 SITE_ID = 1
 USE_TZ = True
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 STATIC_URL = '/staticfiles/'
