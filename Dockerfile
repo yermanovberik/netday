@@ -11,10 +11,9 @@ RUN pip install --no-cache --upgrade pip \
  && pip install --no-cache -r requirements.txt \
  && pip install --no-cache gunicorn
 
-COPY netday2 .
-COPY .env ./core
+COPY . .
 
-RUN python manage.py makemigrations netday2
+RUN python manage.py makemigrations
 
 EXPOSE 8000
 
