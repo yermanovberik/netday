@@ -37,7 +37,7 @@ class RegistrationView(APIView):
     def post(self, request):
         form_data = request.data
         print(request.data)
-        payment_amount = 3.13
+        payment_amount = 0.1
         form = RegistrationForm(form_data)
         if form.is_valid():
             email = form.cleaned_data.get("email")

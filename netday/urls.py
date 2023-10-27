@@ -21,5 +21,5 @@ from .views import RegistrationView
 
 urlpatterns = [
     path('api/v1/registration/', RegistrationView.as_view(), name='registration'),
-    path("admin/", admin.site.urls),
+    path("admin/", admin.site.urls, name='admin'),
 ]
